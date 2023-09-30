@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define UserRepository bean -->
+    <bean id="test" class="com.nanda.spring.di.demo.TestContext" autowire="byType">
+        <constructor-arg value="ui test ocs portal" />
+<!--        <property name="browserContext" ref="browserType" />-->
+    </bean>
+
+    <bean id="chrome" class="com.nanda.spring.di.demo.ChromeContext" primary="true">
+        <property name="chromeVersion" value="12.0.1"/>
+
+    </bean>
+
+    <bean id="firefox" class="com.nanda.spring.di.demo.FireFoxContext" primary="false">
+        <property name="firefoxVersion" value="12.0.1"/>
+
+    </bean>
+
+<!--    <bean id="browser" class="com.nanda.spring.di.demo.ChromeContext" >-->
+<!--        <property name="browserName" value="chrome" />-->
+
+<!--    </bean>-->
+
+
+</beans>

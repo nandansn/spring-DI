@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
+.idea
+spring-di-demo.iml
 
+spring-di-demo/.gradle
+spring-di-demo/build
 # Log file
 *.log
 
